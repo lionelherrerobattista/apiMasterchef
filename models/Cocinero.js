@@ -5,6 +5,7 @@ const {model, Schema} = mongoose;
 const cocineroSchema = new Schema({
     nombre:String,
     especialidad:String,
+    favorito:Boolean,
 });
 
 cocineroSchema.set('toJSON', {
