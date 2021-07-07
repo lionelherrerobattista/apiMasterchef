@@ -18,8 +18,8 @@ usersRouter.post('/', async (req, res, next) => {
         //Genero el hash
         const saltRounds = 10;
 
-        if(password.length !== 6){
-            return next({name:"ValidationError", message:"No tiene 6 caracteres"});
+        if(password.length < 6){
+            return next({name:"ValidationError", message:"No tiene 6 caracteres por lo menos"});
         }
         const passwordHash = await bcrypt.hash(password, saltRounds);
         

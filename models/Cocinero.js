@@ -6,6 +6,7 @@ const cocineroSchema = new Schema({
     nombre:String,
     especialidad:String,
     favorito:Boolean,
+    cantidadCapitulos:Number,
 });
 
 cocineroSchema.set('toJSON', {
